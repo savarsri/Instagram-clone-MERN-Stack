@@ -89,6 +89,10 @@ const Home  = ()=>{
                 }
              })
             setData(newData)
+            const commentInput = document.getElementById('comment-input');
+            if (commentInput) {
+                commentInput.value = '';
+            }
           }).catch(err=>{
               console.log(err)
           })
@@ -154,7 +158,7 @@ const Home  = ()=>{
                                     e.preventDefault()
                                     makeComment(e.target[0].value,item._id)
                                 }}>
-                                  <input type="text" placeholder="add a comment" />  
+                                  <input id='comment-input' type="text" placeholder="add a comment" />  
                                 </form>
                                 
                             </div>
