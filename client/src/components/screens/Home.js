@@ -89,6 +89,7 @@ const Home  = ()=>{
                 }
              })
             setData(newData)
+            //Added logic to empty comment box after posting comment
             const commentInput = document.getElementById('comment-input');
             if (commentInput) {
                 commentInput.value = '';
